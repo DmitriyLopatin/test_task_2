@@ -1,0 +1,45 @@
+@import '_variables.scss';
+@import './fonts.scss';
+@import './c-btn.scss';
+// @import './input.scss';
+@import '../app/components/header/Header.scss';
+@import '../app/components/footer/Footer.scss';
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  font-family: 'Gilroy';
+}
+ul li{
+  list-style: none;
+  margin: 0;
+}
+#__next{
+  // height: 100vh;
+  // background: url(../public/assets/images/Group.svg) bottom center no-repeat, 
+  // linear-gradient(150deg,  $primary 0, #f4faff 30%, #f4faff 70%, $primary 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+ 
+}
+.container{
+  max-width: 1480px;
+  margin: 0 auto;
+  @media (max-width:1400px){
+      max-width: 1300px;
+  }
+}
+
+

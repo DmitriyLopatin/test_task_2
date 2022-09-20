@@ -1,0 +1,168 @@
+.header {
+    font-size: 18px;
+    font-weight: 500;
+    background: url(../../../public/assets/images/hero_bg2.png) top center no-repeat, linear-gradient(rgba(255,255,255,1), rgba(246,246,246,1));
+    // background-size: cover;
+    height: 100%;
+    padding: 20px 15px 50px;
+    h1,h2{
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 80px;
+        max-width: 831px;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul {
+            display: flex;
+            max-width: 1046px;
+            flex: 1;
+            justify-content: space-between;
+        }
+    }
+    &__content{
+        max-width: 1071px;
+        margin-top: 166px;
+    }
+    &__title{
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px;
+        color: #727272;
+        margin: 11px 0 50px 0;
+    }
+    &__missions{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 63px;
+        div{
+            
+            svg{
+                min-width: 24px;
+                min-height: 24px;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 500px;
+                line-height: 19px;
+            }
+            padding: 24px 18px;
+            display: flex;
+            column-gap: 19px;
+            align-items: center;
+            background-color: white;
+            border-radius: 2px;
+            box-shadow: 4px 4px 10px 0px rgba(239, 239, 239, 1), -4px -4px 10px 0px rgba(255, 255, 255, 1) 
+        }
+    }
+    h2{
+        font-weight: 600;
+        margin: 113px 0 30px;
+    }
+    &__association{
+        
+        &--border{
+                border-top: 3px solid $secondary;
+                position: absolute;
+                width: 50%;
+        } 
+        &--content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 30px;
+            
+        }
+        &--item{
+            box-shadow: 4px 4px 10px 0px rgba(239, 239, 239, 1);
+            svg{
+                path{
+                    stroke:$secondary;
+                    fill:$secondary;
+                    transition: $transition;
+                }
+            }
+            background-color: white;
+            position: relative;
+            cursor: pointer;
+            &:hover{
+                svg{
+                    path{
+                        fill:$primary;
+                        stroke: $primary;
+                        transition: $transition;
+                    }
+                }
+            }
+            &:hover .header__association--border{
+                border-color: $primary; 
+                transition: $transition;
+            }
+            &:hover >p:last-child span:last-child{
+                transition: $transition;
+                color: $primary;
+            }
+          
+
+            &>div:nth-of-type(2n){
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 121px;
+                padding: 0 35px;
+                &:hover div p{
+                    color: $primary;
+                }
+                div{
+                    p{
+                        color: $secondary;
+                        transition: $transition;
+                        text-align: right;
+                    }
+                    p:first-child{
+                        font-size: 36px;
+                        font-weight: 300;
+                        line-height: 43px;
+                    }
+                }
+            }
+            &>p:first-of-type{
+                height: 121px;
+                border-bottom: 1px solid rgba(243, 243, 243, 1);
+                padding: 0 35px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;   
+                span{
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 29px;
+                }
+                &:hover ~  div p{
+                    color: $primary;
+                    transition: $transition;
+                }
+                &:hover ~  div >p:first-child{
+                    color: $secondary;
+                    transition: $transition;
+                }
+            }
+            &>p:last-of-type{
+                padding: 0 35px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;   
+                height: 121px;
+                span:last-child{
+                    font-size: 36px;
+                    font-weight: 300;
+                    line-height: 43px;
+                    color: $secondary;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}

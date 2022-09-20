@@ -1,0 +1,46 @@
+.c-btn {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    white-space: nowrap;
+    border: none;
+    height: 57px;
+    background-color: $primary;
+    color: white;
+}
+.c-btn-header{
+    font-size: 24px;
+    font-weight: 400px;
+    line-height: 28px;
+    padding: 14px 82px;
+}
+.c-btn-participation{
+    font-size: 18px;
+    font-weight: 600px;
+    line-height: 22px;
+}
+
+.burger-btn{
+    width: 36px;
+    height: 36px;
+    padding: 9px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    span{
+        border-top: 2px solid rgba(44, 53, 55, 1);
+        width: 24px;
+        &:first-child{
+          width: 9px;
+        }
+        &:last-child{
+          width: 15px;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+    }
+  }
+  
